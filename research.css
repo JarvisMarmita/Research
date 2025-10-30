@@ -1,0 +1,303 @@
+:root{
+  --banner: #41A66F;
+  --accent-start: #10b981;
+  --accent-end: #059669;
+  --thumb-min: 48px;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, var(--accent-start) 0%, var(--accent-end) 100%);
+    background-attachment: fixed; /* keep gradient stable during scroll */
+}
+
+/*  <weight>: Use a value from 400 to 900
+<uniquifier>: Use a unique and descriptive class name */
+.montserrat-uniquifier {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 519;
+  font-style: normal;
+} 
+
+.poppins-regular {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+/*  <weight>: Use a value from 400 to 900
+<uniquifier>: Use a unique and descriptive class name */
+
+.playfair-display-uniquifier {
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.banner-color {
+    background-color:#41A66F;
+    width: 100%;
+    height: 9em;
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.logo-circle {
+    width: 183px;
+    height: 183px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 5%; /* Pushes logo to the right */
+}
+
+.banner-logo {
+    height: 185px; /* Adjust as needed */
+    width: 185px;
+}
+
+.banner-title {
+    color: white;
+    font-size: 2.5rem;
+    font-family: Montserrat;
+    font-size: 2.25em;
+    letter-spacing: 0.15em;
+    margin-left: 10%;
+    margin-top: 0.9%;
+}
+
+.Research-name{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:aliceblue;
+    font-size: 3em;
+    font-weight: 800;
+    font-family: "Playfair Display", serif;
+    max-width: 56.25em; /* prevents overly long single lines */
+    letter-spacing: 0.03em;
+    margin-top: 3rem;/* space from top, centered horizontally */
+    text-align: center; /* center each line */
+    font-size: clamp(28x, 5vw, 64px); /* responsive size */    
+}
+
+.Research-info .Lassalian-word {
+    color: #087830;
+}
+.Research-info{
+    padding: 0 1rem;         /* side padding on small screens */
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    font-size: clamp(0.95rem, 2.5vw, 1.15rem); /* fixed responsive size */
+    color: #ffffff;          /* change as needed */
+}
+
+.authors--first{
+    display: flex;
+    flex-direction: column; /* stack label on top, names below */
+    align-items: center;
+    gap: 0.25rem;
+    font-family: "Poppins", sans-serif;
+    font-size: larger;
+    margin-top: 1rem;
+}
+
+.authors--second{
+    display: block;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    font-size: 0.85rem;
+    color: rgba(0,0,0,0.75);
+}
+
+.authors-names{
+    display: inline-flex; /* keeps names on one horizontal line */
+    gap: 0.5rem;           /* space between name items */
+    align-items: center;
+    white-space: nowrap;   /* prevents unwanted wrapping */
+}
+
+.my-button {
+    display: block;              
+    margin: 1.25rem auto;        
+    padding: 0.75rem 1.25rem;
+    font-family: "Poppins", sans-serif;
+    font-size: 1rem;
+    background-color: #fff;
+    color: #41A66F;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+    font-size: x-large;
+
+    /* enable smooth scaling on hover */
+    transition: transform 180ms cubic-bezier(.2,.9,.3,1), box-shadow 180ms ease;
+    transform-origin: center;
+}
+
+/* Hover only: enlarge button */
+.my-button:hover,
+.my-button:focus {
+    transform: scale(1.12);
+    box-shadow:  0.875em 1.75em rgba(0,0,0,0.28);
+    outline: none;
+}
+    .square-border{
+    position:relative;
+    margin: auto;
+    width: min(1100px, 94%);
+    height: 38.75em; /* adjust to taste */
+    background:#ffffff;
+    border-radius:1.25em;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+    transition: transform 180ms ease, box-shadow 180ms ease, background-color 180ms ease, color 180ms ease;
+    overflow: hidden;
+    padding-top: 4.5em; /* leave space for the centered button */
+    transform-origin: center;
+    padding: 1em;
+}
+
+.page-column{
+    padding: 0.75rem 1rem;   /* reduced padding */
+    flex: 1 1 48%;           /* slightly wider columns */
+}
+
+.page {
+    font-size: 0.95rem;      /* adjust between 0.9 - 1.0 to taste */
+    line-height: 1.45;
+}
+.Book-view {
+    position: absolute;
+    left: 50%;                      /* center horizontally relative to .square-border */
+    top: 1.5rem;                   /* distance from the top edge of the box */
+    transform: translateX(-50%);    /* keep it centered */
+    z-index: 10;
+    padding: 0.6rem 0.6rem;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    background: #fff;
+    color: #41A66F;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    transition: transform 160ms ease, box-shadow 160ms ease;
+}
+
+/* keep it centered while hovering */
+.Book-view:hover {
+    transform: translateX(-50%) translateY(-4px) scale(1.03);
+}
+
+.book-pages{
+    position: relative;
+    height: calc(100% - 3rem); /* leave room for top padding/button */
+    padding: 1rem 1rem;
+    box-sizing: border-box;
+}
+
+/* the scrolling container (we hide native scrollbar and drive it with JS) */
+.inner-scroll{
+    height: 100%;
+    overflow-y: auto; /* native scroll used but native scrollbar hidden */
+    display: flex;
+    gap: 3rem;
+    padding: 1rem 0;
+    scrollbar-width: none; /* firefox */
+    -ms-overflow-style: none; /* IE 10+ */
+}
+.inner-scroll::-webkit-scrollbar { width: 0; height: 0; } /* hide webkit scrollbar */
+
+/* two columns representing pages */
+.page-column{
+    flex: 1 1 45%;
+    min-width: 320px;
+    max-width: 50%;
+    box-sizing: border-box;
+    background: transparent;
+    padding: 1.5rem 2.5rem;
+}
+
+/* style for a single page inside a column */
+.page{
+    background: transparent;
+    color: #123;
+}
+.page h2{
+    color: #10b981;
+    margin-top: 0;
+}
+
+/* centered custom scrollbar track + thumb */
+.scrollbar-track{
+    position: absolute;
+    top: 1.25rem;
+    bottom: 1.25rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 18px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    pointer-events: none; /* allow clicks through track except on thumb */
+    z-index: 30;
+}
+
+.scrollbar-thumb{
+    pointer-events: auto; /* enable dragging */
+    width: 10px;
+    height: 90px; /* default thumb height */
+    border-radius: 999px;
+    background: linear-gradient(180deg, #10b981, #059669);
+    box-shadow: 0 4px 12px rgba(6, 95, 70, 0.35);
+    cursor: grab;
+    transition: box-shadow 120ms ease, transform 120ms ease;
+}
+
+/* active/dragging state */
+.scrollbar-thumb:active { cursor: grabbing; transform: scale(1.02); box-shadow: 0 8px 20px rgba(6,95,70,0.35); }
+
+/* ensure Book-view button stays visible above track */
+.Book-view { z-index: 40; }
+
+/* small responsive tweak */
+@media (max-width: 900px){
+    .page-column{ max-width: 100%; flex-basis: 100%; }
+    .book-pages{ padding: 1rem; }
+    .scrollbar-track{ left: calc(100% - 18px); transform:none; } /* move to right on narrow screens */
+}
+
+.page-toggle{
+    position: absolute;
+    top: 14px;                 /* adjust vertical position */
+    right: 1.25rem;            /* place at the right edge of the box; change to left/center if needed */
+    z-index: 45;
+    padding: 0.55rem 1rem;
+    font-size: 0.95rem;
+    border-radius: 8px;
+    background: #10b981;       /* primary accent */
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+    transition: transform 160ms ease, box-shadow 160ms ease, background-color 120ms ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+/* hover / active */
+.page-toggle:hover{ transform: translateY(-3px) scale(1.02); }
+.page-toggle:active{ transform: translateY(-1px) scale(.99); }
+
+/* optional pressed state (update aria-pressed in JS if you want) */
+.page-toggle[aria-pressed="true"]{
+    background: #059669;
+}
